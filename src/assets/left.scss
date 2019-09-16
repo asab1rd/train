@@ -1,0 +1,40 @@
+.left-container{
+    background-color: #FFF;
+    display: block;
+    border-radius: .3125em;
+    border: 1px solid #DCE3E6;
+    
+    
+    width : 29vw;
+    height: auto;
+    margin-right: 1vw;
+
+    .left-title {
+        display: block;
+        margin: 2vw      
+        
+    }
+
+    
+
+    
+}
+
+
+
+.search-section.promotion {
+    .field {
+        display : flex
+    }
+}
+
+.submit{
+    display: flex;
+    justify-content: space-between;
+    margin : 2vw 2vw 3vw 2vw
+}
+.ui.positive.button{
+    width: 9vw;
+    background-color : #01aa91;
+
+}
