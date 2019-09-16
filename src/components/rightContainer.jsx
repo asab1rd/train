@@ -14,6 +14,7 @@ export default function RightContainer() {
 
     useEffect(() => {
 
+        // On montre un composant en fonction de l'input qui a été cliqué
         if (context.state.clickedInput === "cityDepart"){
             setcomponentShow(<ShowCities nature="cityDepart"/>)
             setcomponentTitle("Choisissez une gare de départ")

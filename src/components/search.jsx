@@ -1,10 +1,8 @@
 import React, {useContext,useState,useEffect} from 'react'
 import { Form, Input, Button } from 'semantic-ui-react'
-import {DateInput} from 'semantic-ui-calendar-react'
 import '../assets/search.scss'
 import axios from 'axios'
 import appContext from '../reducers/appContext'
-import Calendar from './calendar'
 
 
 export default function Search() {
@@ -13,24 +11,22 @@ export default function Search() {
     const [word, setword] = useState("")
     const [foundCities, setfoundCities] = useState([])
     
-    // eslint-disable-next-line
+    
     useEffect(() => {
 
         context.changeSearchedWord(word)
         context.fetchFoundCities(foundCities)
         
-        
+        // eslint-disable-next-line
     }, [foundCities, word])
+
     
     const onInputChange = (e) => {
         if (e.target.value) {
             setword(e.target.value)
-            console.log(word)
             fetchCities()
         } else {
             setword("")
-            // context.changeSearchedWord(word)
-            // context.fetchFoundCities([])
             setfoundCities([])
         }
     }
@@ -45,11 +41,7 @@ export default function Search() {
             .catch(err => {
                 console.log(err)
             }) 
-            console.log(context.state)
     }
-
-
-    const vpop = () => console.log(context.state)
 
     return (
         <Form>
@@ -62,8 +54,12 @@ export default function Search() {
                     className="s-depart search-input" 
                     placeholder="Saisissez votre gare de départ..." 
                     onChange={onInputChange} 
-                    onClick={()=>context.changeClicked('cityDepart')}
-                    value={context.state.departInput ? context.state.departInput : ""} 
+                    onClick={()=> {
+                        context.changeClicked('cityDepart')
+                    }}
+                    value={
+                        // VALEUR SELON LE BUTTON SUR LEQUEL ON CLIQUE DANS SHOWCITIES
+                        context.state.departInput ? context.state.departInput : undefined} 
                 />
                 <Input
                     selected
@@ -73,7 +69,7 @@ export default function Search() {
                     placeholder="Saisissez votre gare d'arrivée..." 
                     onChange={onInputChange} 
                     onClick={()=>context.changeClicked('cityArrived')}
-                    value={context.state.arrivedInput ? context.state.arrivedInput : ""} 
+                    value={context.state.arrivedInput ? context.state.arrivedInput : undefined} 
 
                 />
             </Form.Field>
@@ -118,7 +114,7 @@ export default function Search() {
 
             <div className="submit">
                 <a href="#calendar" className="add-reuct">Utiliser un code de réduction</a>
-                <Button positive type='submit' onClick={vpop} className="btn-submit">RECHERCHER</Button>
+                <Button positive type='submit' className="btn-submit">RECHERCHER</Button>
             </div>
 
         </Form>

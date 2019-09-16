@@ -4,6 +4,7 @@ function infoPromo(props) {
     return (
         <div className="promo-info-container">
             {
+            // CONTIENT CONNECTION ET CARTE DE REDUCTION
             props.infos.map((item,i)=>(
                 <div className={`promo-info-${i}`} key={i}>
                         <h3>{item.title}</h3>

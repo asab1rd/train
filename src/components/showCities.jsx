@@ -8,11 +8,13 @@ export  default function ShowCities (props){
 
 
     useEffect(() => {
+        // showPopular Est vrai que si on a pas encore tapé pour chercher une ville 
         setshowPopular(context.state.searchedWord === "" ? true:false)
     }, [context.state.searchedWord])
     
     const handleClick = (name) =>{
-        console.log(name)
+        //Si on clique sur l'input depart on l'inscit dans le contexte
+        // Pareil pour tous les autres button presents sur le composant gauche 
         props.nature === "cityDepart" ? 
             context.setDepartInput(name):context.setArrivedInput(name)
     }
@@ -22,6 +24,8 @@ export  default function ShowCities (props){
                     <List className="city-choice">
                         <Button.Group basic vertical>
                             {   
+                                // CHECK SI ELLE DOIT AFFICHER LES VILLES POPULAIRES OU LES VILLES TOUVEES
+                                 
                                 showPopular ?
                                     context.state && context.state.popularCities.map((item,i) => {
                                         return <Button key={i}  onClick={()=>handleClick(item.local_name)}>
