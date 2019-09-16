@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tain/static/css/main.a8de4259.chunk.css",
+    "main.js": "/tain/static/js/main.29cac980.chunk.js",
+    "main.js.map": "/tain/static/js/main.29cac980.chunk.js.map",
+    "runtime~main.js": "/tain/static/js/runtime~main.4c9b92ae.js",
+    "runtime~main.js.map": "/tain/static/js/runtime~main.4c9b92ae.js.map",
+    "static/js/2.e89c9733.chunk.js": "/tain/static/js/2.e89c9733.chunk.js",
+    "static/js/2.e89c9733.chunk.js.map": "/tain/static/js/2.e89c9733.chunk.js.map",
+    "index.html": "/tain/index.html",
+    "precache-manifest.9a96af5b23e8957e58b9e9be69a6e80e.js": "/tain/precache-manifest.9a96af5b23e8957e58b9e9be69a6e80e.js",
+    "service-worker.js": "/tain/service-worker.js",
+    "static/css/main.a8de4259.chunk.css.map": "/tain/static/css/main.a8de4259.chunk.css.map"
+  }
+}
