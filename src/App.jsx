@@ -75,20 +75,6 @@ export default function App() {
   }
   
 
-
-  
-  // useEffect(() => {
-
-  //   axios
-  //       .get('https://api.tictactrip.eu/cities/popular/5')
-  //       .then(res => {
-  //         fetchPopular(res.data)
-  //         // setstate(context.state)
-  //       })
-  //       .catch(err => {
-  //           console.log(err)
-  //       })
-  // },[])
    
   return (
     <div className="App">
